@@ -19,8 +19,8 @@ pub fn tooltips(ecs: &SubWorld, #[resource] mouse_pos: &Point, #[resource] camer
     .filter(|(_, pos, _)| **pos == map_pos && player_fov.visible_tiles.contains(&pos))
     .for_each(|(entity, _, name)| {
       let screen_pos = *mouse_pos * 4;
-      let display = if let Ok(health) = ecs.entry_ref(*entity).unwrap().get_component::<Health>() {
-        format!("{} : {} hp", &name.0, health.current)
+      let display = if let Ok(_health) = ecs.entry_ref(*entity).unwrap().get_component::<Health>() {
+        format!("{}", &name.0)
       } else {
         name.0.clone()
       };
