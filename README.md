@@ -3,5 +3,7 @@
 
 ### To run
 ```bash
+git clone https://github.com/kirosaima/dungeoncrawler.git
+cd dungeoncrawler 
 cargo run --release
 ```
