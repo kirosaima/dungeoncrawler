@@ -12,7 +12,7 @@ pub fn hud(ecs: &SubWorld) {
 
   let mut draw_batch = DrawBatch::new();
   draw_batch.target(2);
-  draw_batch.print_centered(1, "Explore the Dungeon. Cursor keys to move.");
+  draw_batch.print_centered(1, "Explore the Dungeon. WASD to move.");
   draw_batch.bar_horizontal(
     Point::zero(),
     SCREEN_WIDTH * 2,
